@@ -1,6 +1,7 @@
 package com.example.cab.cabbooking.model;
 
 public class Ride {
+    private String userName;
     private long sourceXCoordinate;
     private long sourceYCoordinate;
     private long destXCoordinate;
@@ -10,8 +11,9 @@ public class Ride {
     public Ride() {
     }
 
-    public Ride(long sourceXCoordinate, long sourceYCoordinate,
-            long destXCoordinate, long destYCoordinate, long rideCost) {
+    public Ride(String userName, long sourceXCoordinate, long sourceYCoordinate,
+            long destXCoordinate, long destYCoordinate) {
+        this.userName = userName;
         this.sourceXCoordinate = sourceXCoordinate;
         this.sourceYCoordinate = sourceYCoordinate;
         this.destXCoordinate = destXCoordinate;
@@ -37,7 +39,6 @@ public class Ride {
     }
 
     // Setters
-    
 
     public void setSourceXCoordinate(long sourceXCoordinate) {
         this.sourceXCoordinate = sourceXCoordinate;
@@ -59,6 +60,14 @@ public class Ride {
     public String toString() {
         return "Ride [sourceXCoordinate=" + sourceXCoordinate + ", sourceYCoordinate=" + sourceYCoordinate
                 + ", destXCoordinate=" + destXCoordinate + ", destYCoordinate=" + destYCoordinate + "]";
-    } 
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
 }

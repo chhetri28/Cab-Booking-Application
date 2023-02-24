@@ -2,11 +2,10 @@ package com.example.cab.cabbooking.model;
 
 public class User {
     private String userName;
-
     private char gender;
     private int age;
 
-    public User(){
+    public User() {
 
     }
     public User(String userName, char gender, int age) {
